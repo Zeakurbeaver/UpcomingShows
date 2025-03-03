@@ -1,38 +1,68 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  position: relative;
+  overflow: hidden;
+  background-color: #404a5e;
 }
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 20px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App-body {
+  padding: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App-footer {
+  background-color: #282c34;
+  padding: 10px;
+}
+
+/* Style for the Open Mic image */
+.open-mic-img {
+  width: 50%;
+  max-width: 38rem;
+  height: auto;
+}
+
+/* Star emoji styles */
+.star {
+  position: fixed;
+  font-size: 5rem;  /* Adjust the size as needed */
+  cursor: pointer;
+  animation: rotate 4s linear infinite;
+  transition: top 0.5s ease;
+}
+
+.star.left {
+  left: 40px;
+}
+
+.star.right {
+  right: 50px;
+}
+
+.star {
+  position: absolute;
+  font-size: 5rem;
+  cursor: pointer;
+  animation: rotate 4s linear infinite;
+  transition: top 0.5s ease, left 0.5s ease, right 0.5s ease;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  will-change: top, left, right, transform;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+
+
+/* Rotating animation */
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
