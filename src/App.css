@@ -29,24 +29,8 @@
 
 /* Star emoji styles */
 .star {
-  position: fixed;
-  font-size: 5rem;  /* Adjust the size as needed */
-  cursor: pointer;
-  animation: rotate 4s linear infinite;
-  transition: top 0.5s ease;
-}
-
-.star.left {
-  left: 40px;
-}
-
-.star.right {
-  right: 50px;
-}
-
-.star {
   position: absolute;
-  font-size: 5rem;
+  font-size: 5rem;  /* Default size for larger screens */
   cursor: pointer;
   animation: rotate 4s linear infinite;
   transition: top 0.5s ease, left 0.5s ease, right 0.5s ease;
@@ -59,10 +43,45 @@
   transform: translate3d(0, 0, 0);
 }
 
+.star.left {
+  left: 40px;
+}
 
+.star.right {
+  right: 50px;
+}
 
 /* Rotating animation */
 @keyframes rotate {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 768px) {
+  .open-mic-img {
+    width: 90%; /* Increase image width on smaller screens */
+    max-width: 100%;
+  }
+  
+  .App-header, .App-footer {
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+  
+  .App-body {
+    padding: 15px;
+  }
+  
+  .star {
+    font-size: 3rem; /* Reduce star size on smaller screens */
+  }
+  
+  .star.left {
+    left: 10px; /* Adjust left position */
+  }
+  
+  .star.right {
+    right: 10px; /* Adjust right position */
+  }
 }
