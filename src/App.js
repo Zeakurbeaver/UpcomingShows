@@ -79,7 +79,7 @@ function App() {
               "startDate": "2025-03-07T21:30:00-06:00",
               "doorTime": "2025-03-07T21:00:00-06:00",
               "description": "Join us every Tuesday at Otaku Lounge for open mic stand-up comedy featuring bar service, anime, gaming, nerd culture, and a vibrant social atmosphere in Kansas City.",
-              "image": "https://raw.githubusercontent.com/Zeakurbeaver/UpcomingShow/main/assets/images/Open-mic.png",
+              "image": "https://cdn.shopify.com/s/files/1/0674/2779/5200/files/Open-Mic_Comedy.png?v=1740959244",
               "location": {
                 "@type": "Place",
                 "name": "Otaku Lounge",
