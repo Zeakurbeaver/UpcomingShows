@@ -69,41 +69,51 @@ function App() {
 
   return (
     <div className="App">
-      <Helmet>
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "Event",
-              "name": "Weekly Open Mic Comedy",
-              "startDate": "2025-03-07T21:30:00-06:00",
-              "doorTime": "2025-03-07T21:00:00-06:00",
-              "description": "Join us every Tuesday at Otaku Lounge for open mic stand-up comedy featuring bar service, anime, gaming, nerd culture, and a vibrant social atmosphere in Kansas City.",
-              "image": "https://cdn.shopify.com/s/files/1/0674/2779/5200/files/Open-Mic_Comedy.png?v=1740959244",
-              "location": {
-                "@type": "Place",
-                "name": "Otaku Lounge",
-                "address": {
-                  "@type": "PostalAddress",
-                  "streetAddress": "640 E 18th St",
-                  "addressLocality": "Kansas City",
-                  "addressRegion": "MO",
-                  "postalCode": "64108",
-                  "addressCountry": "US"
-                }
-              },
-              "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-              "eventStatus": "https://schema.org/EventScheduled",
-              "keywords": "open mic, comedy, stand-up, bar, anime, gaming, nerd culture, social event",
-              "organizer": {
-                "@type": "Organization",
-                "name": "Otaku Lounge",
-                "url": "https://www.otakulounge.com"
-              }
-            }
-          `}
-        </script>
-      </Helmet>
+<Helmet>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "Weekly Open Mic Comedy",
+        "startDate": "2025-03-07T21:30:00-06:00",
+        "eventSchedule": {
+          "@type": "Schedule",
+          "repeatFrequency": "P1W",
+          "byDay": "TU",
+          "startDate": "2025-03-07T21:30:00-06:00"
+        },
+        "description": "Join us every Tuesday at Otaku Lounge for open mic stand-up comedy featuring bar service, anime, gaming, nerd culture, and a vibrant social atmosphere in Kansas City.",
+        "image": "https://cdn.shopify.com/s/files/1/0674/2779/5200/files/Open-Mic_Comedy.png?v=1740959244",
+        "location": {
+          "@type": "Place",
+          "name": "Otaku Lounge",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "640 E 18th St",
+            "addressLocality": "Kansas City",
+            "addressRegion": "MO",
+            "postalCode": "64108",
+            "addressCountry": "US"
+          }
+        },
+        "performer": {
+          "@type": "Person",
+          "name": "Daniel Santiago"
+        },
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "keywords": "open mic, comedy, stand-up, bar, anime, gaming, nerd culture, social event",
+        "organizer": {
+          "@type": "Organization",
+          "name": "Otaku Lounge",
+          "url": "https://zeakurbeaver.github.io/UpcomingShows/"
+        }
+      }
+    `}
+  </script>
+</Helmet>
+
 
       {/* Main content container (centered in the middle of the viewport) */}
       <div className="content-wrapper">
@@ -116,7 +126,7 @@ function App() {
         </main>
         
         <footer className="App-footer">
-          <p>&copy; 2025 Rolling SKies Media. All rights reserved.</p>
+          <p>&copy; 2025 Rolling Skies Media. All rights reserved.</p>
         </footer>
       </div>
 
